@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 #define num_food 20
-
 void printfline(){
 	printf("==================================\n");
 }
-typedef struct //À½½Ä ±¸Á¶Ã¼ ¼±¾ð
+typedef struct //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½
 {
 	int num;
 	char name[20];
@@ -26,14 +25,13 @@ int main() {
 	food f[20];
 	setfood(f);
 
-
 	while (1) {
-		printfline;
-		printf("¾È³çÇÏ¼¼¿ä °æ±âpc¹æ ÁÖ¹®È­¸é ÀÔ´Ï´Ù\n");
-		printfline;
-		printf("1. À½½Ä  2. À½·á  3. »çÀÌµå");
-		printfline;
-		printf("¸Þ´º¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä: ");
+		printfline();
+		printf("ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½pcï¿½ï¿½ ï¿½Ö¹ï¿½È­ï¿½ï¿½ ï¿½Ô´Ï´ï¿½\n");
+		printfline();
+		printf("1. ï¿½ï¿½ï¿½ï¿½  2. ï¿½ï¿½ï¿½ï¿½  3. ï¿½ï¿½ï¿½Ìµï¿½");
+		printfline();
+		printf("ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½: ");
 		scanf("%d", &inputnum);
 		switch (inputnum)
 		{
@@ -47,100 +45,101 @@ int main() {
 			customer(f);
 			break;
 		default:
-			printf("ÀÔ·ÂÀÌ Àß¸øµÇ¾ú½À´Ï´Ù!");
+			printf("ï¿½Ô·ï¿½ï¿½ï¿½ ï¿½ß¸ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½!");
 		}
+		break;
 	}
-	return 0;
+
 }
 void setfood(food* food) {
 
-	food[0].num = 1; //À½½Ä¹øÈ£
-	strcpy(food[0].name, "Á¦À°ººÀ½");
+	food[0].num = 1; //ï¿½ï¿½ï¿½Ä¹ï¿½È£
+	strcpy(food[0].name, "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 	food[0].price = 5500;
 	food[0].pctable = 0;
 
 	food[1].num = 2;
-	strcpy(food[1].name, "Ä¡Å²¸¶¿äµ¤¹ä");
+	strcpy(food[1].name, "Ä¡Å²ï¿½ï¿½ï¿½äµ¤ï¿½ï¿½");
 	food[1].price = 5000;
 	food[1].pctable = 0;
-	
+
 	food[2].num = 3;
-	strcpy(food[2].name, "½ºÆÔ¸¶¿äµ¤¹ä");
+	strcpy(food[2].name, "ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½äµ¤ï¿½ï¿½");
 	food[2].price = 5000;
 	food[2].pctable = 0;
 
 	food[3].num = 4;
-	strcpy(food[3].name, "¶ó¸é&¹ä");
+	strcpy(food[3].name, "ï¿½ï¿½ï¿½&ï¿½ï¿½");
 	food[3].price = 4000;
 	food[3].pctable = 0;
 
 	food[4].num = 5;
-	strcpy(food[4].name, "±èÄ¡ººÀ½¹ä");
+	strcpy(food[4].name, "ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 	food[4].price = 4500;
 	food[4].pctable = 0;
 
 	food[5].num = 6;
-	strcpy(food[5].name, "ÄÝ¶ó");
+	strcpy(food[5].name, "ï¿½Ý¶ï¿½");
 	food[5].price = 1000;
 	food[5].pctable = 0;
 
 	food[6].num = 7;
-	strcpy(food[6].name, "»çÀÌ´Ù");
+	strcpy(food[6].name, "ï¿½ï¿½ï¿½Ì´ï¿½");
 	food[6].price = 1000;
 	food[6].pctable = 0;
 
 	food[7].num = 8;
-	strcpy(food[7].name, "¾ÆÀÌ½º¾Æ¸Þ¸®Ä«³ë");
+	strcpy(food[7].name, "ï¿½ï¿½ï¿½Ì½ï¿½ï¿½Æ¸Þ¸ï¿½Ä«ï¿½ï¿½");
 	food[7].price = 1500;
 	food[7].pctable = 0;
 
 	food[8].num = 9;
-	strcpy(food[8].name, "¾ÆÀÌ½ºÆ¼");
+	strcpy(food[8].name, "ï¿½ï¿½ï¿½Ì½ï¿½Æ¼");
 	food[8].price = 1500;
 	food[8].pctable = 0;
 
 	food[9].num = 10;
-	strcpy(food[9].name, "°úÀÏÁÖ½º");
+	strcpy(food[9].name, "ï¿½ï¿½ï¿½ï¿½ï¿½Ö½ï¿½");
 	food[9].price = 2000;
 	food[9].pctable = 0;
 
 	food[10].num = 11;
-	strcpy(food[10].name, "°¨ÀÚÆ¢±è");
+	strcpy(food[10].name, "ï¿½ï¿½ï¿½ï¿½Æ¢ï¿½ï¿½");
 	food[10].price = 2000;
 	food[10].pctable = 0;
 
 	food[11].num = 12;
-	strcpy(food[11].name, "Ä¡Áîº¼");
+	strcpy(food[11].name, "Ä¡ï¿½îº¼");
 	food[11].price = 2500;
 	food[11].pctable = 0;
 
 	food[12].num = 13;
-	strcpy(food[12].name, "Ä¡Áî½ºÆ½");
+	strcpy(food[12].name, "Ä¡ï¿½î½ºÆ½");
 	food[12].price = 2000;
 	food[12].pctable = 0;
 
 	food[13].num = 14;
-	strcpy(food[13].name, "±¸¿î °è¶õ");
+	strcpy(food[13].name, "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½");
 	food[13].price = 2000;
 	food[13].pctable = 0;
 
 	food[14].num = 15;
-	strcpy(food[14].name, "´ß ²¿Ä¡");
+	strcpy(food[14].name, "ï¿½ï¿½ ï¿½ï¿½Ä¡");
 	food[14].price = 2000;
 	food[14].pctable = 0;
 }
 
-void customer(food* f) //¼Õ´Ô ¸Þ´º
+void customer(food* f) //ï¿½Õ´ï¿½ ï¿½Þ´ï¿½
 {
 	int input_ct;
 	while (1)
 	{
-		printfline;
-		printf("****À½½ÄÁÖ¹®È­¸é ÀÔ´Ï´Ù****\n");
-		printfline;
-		printf("1. À½½Ä¸Þ´ºº¸±â  2. À½½Ä ÁÖ¹®  3. ÀÌÀüÈ­¸éÀ¸·Î\n");
-		printfline;
-		printf("¸Þ´º¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä : ");
+		printfline();
+		printf("****ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½È­ï¿½ï¿½ ï¿½Ô´Ï´ï¿½****\n");
+		printfline();
+		printf("1. ï¿½ï¿½ï¿½Ä¸Þ´ï¿½ï¿½ï¿½ï¿½ï¿½  2. ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¹ï¿½  3. ï¿½ï¿½ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
+		printfline();
+		printf("ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½ : ");
 		scanf("%d", &input_ct);
 		switch (input_ct)
 		{
@@ -153,26 +152,26 @@ void customer(food* f) //¼Õ´Ô ¸Þ´º
 		case 3:
 			return;
 		default:
-			printf("ÀÔ·ÂÀÌ Àß¸ø µÇ¾ú½À´Ï´Ù!");
+			printf("ï¿½Ô·ï¿½ï¿½ï¿½ ï¿½ß¸ï¿½ ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½!");
 		}
 	}
 }
 
-void worker(food* f)// Á¾¾÷¿ø Á÷¿ø ¸Þ´º
+void worker(food* f)// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Þ´ï¿½
 {
 	int input_wo;
 	while (1)
 	{
-		printfline;
-		printf("*****Á÷¿ø ¸Þ´º*****");
-		printfline;
-		printf("1. ÁÖ¹® ÇöÈ²  2. °è»ê  3. ÀÌÀüÈ­¸éÀ¸·Î");
-		printfline;
-		printf("¸Þ´º¼±ÅÃ");
+		printfline();
+		printf("*****ï¿½ï¿½ï¿½ï¿½ ï¿½Þ´ï¿½*****");
+		printfline();
+		printf("1. ï¿½Ö¹ï¿½ ï¿½ï¿½È²  2. ï¿½ï¿½ï¿½  3. ï¿½ï¿½ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		printfline();
+		printf("ï¿½Þ´ï¿½ï¿½ï¿½ï¿½ï¿½");
 		scanf("%d", &input_wo);
 		switch (input_wo)
 		{
-		case 1: 
+		case 1:
 			showorder(f);
 			break;
 		case 2:
@@ -181,23 +180,23 @@ void worker(food* f)// Á¾¾÷¿ø Á÷¿ø ¸Þ´º
 		case 3:
 			return;
 			default:
-			printf("ÀÔ·ÂÀÌ Àß¸øµÇ¾ú½À´Ï´Ù!");
+			printf("ï¿½Ô·ï¿½ï¿½ï¿½ ï¿½ß¸ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½!");
 		}
 	}
 }
-void showfood(food* food)//À½½Äº¸¿©ÁÖ±â
+void showfood(food* food)//ï¿½ï¿½ï¿½Äºï¿½ï¿½ï¿½ï¿½Ö±ï¿½
 {
 	int i = 0;
-	printfline;
-	printf("----À½½ÄÀ» È®ÀÎÇÕ´Ï´Ù----");
-	printfline;
+	printfline();
+	printf("----ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Õ´Ï´ï¿½----");
+	printfline();
 	for (i = 0; i < num_food; i++)
 	{
 		if (food[i].pctable == 0)
 		{
-			printf("¹øÈ£ :%d\n", food[i].num);
-			printf("À½½Ä ÀÌ¸§ :%s\n", food[i].name);
-			printf("°¡°Ý :%d\n", food[i].price);
+			printf("ï¿½ï¿½È£ :%d\n", food[i].num);
+			printf("ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ :%s\n", food[i].name);
+			printf("ï¿½ï¿½ï¿½ï¿½ :%d\n", food[i].price);
 		}
 	}
 }
@@ -205,31 +204,31 @@ void showfood(food* food)//À½½Äº¸¿©ÁÖ±â
 void orderfood(food* food)
 {
 	int i = 0;
-	printfline;
-	printf("*****À½½Ä ÁÖ¹® ÇöÈ²*****");
-	printfline;
+	printfline();
+	printf("*****ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¹ï¿½ ï¿½ï¿½È²*****");
+	printfline();
 	for (i = 0; i < num_food; i++)
 	{
 		if (food[i].pctable != 0)
 		{
-			printf("¹øÈ£: %d\n", food[i].num);
-			printf("À½½Ä ÀÌ¸§ : %s\n", food[i].name);
-			printf("°¡°Ý : %d\n", food[i].price);
-			printf("Å×ÀÌºí ¹øÈ£ :%d", food[i].pctable);
+			printf("ï¿½ï¿½È£: %d\n", food[i].num);
+			printf("ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ : %s\n", food[i].name);
+			printf("ï¿½ï¿½ï¿½ï¿½ : %d\n", food[i].price);
+			printf("ï¿½ï¿½ï¿½Ìºï¿½ ï¿½ï¿½È£ :%d", food[i].pctable);
 	 }
 	}
 }
 void money(food* food) {
- 
+
 	int pctable_num = 0;
 	int	total_money = 0;
 	int	money = 0;
-	int balance = 0; //balance ÀÜ¾× //money ¹ÞÀº±Ý¾×
+	int balance = 0; //balance ï¿½Ü¾ï¿½ //money ï¿½ï¿½ï¿½ï¿½ï¿½Ý¾ï¿½
 
-	int i = 0; 
+	int i = 0;
 	FILE* file;
 	file = fopen("receipt.txt", "w");
-	fputs("¿µ¼öÁõ" , file);
+	fputs("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" , file);
 	fclose(file);
 
 
